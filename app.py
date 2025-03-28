@@ -65,4 +65,5 @@ def index():
     return jsonify({'message': 'Model is ready to predict'})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    po = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=po)
